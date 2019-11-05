@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 
-
-// Create connection to SQLite DB
+//Connect to SQLite DB
 const ratingsDB = new Sequelize({
     dialect: 'sqlite',
     storage: './ratings.db',
@@ -10,21 +9,21 @@ const ratingsDB = new Sequelize({
     }
 });
 
-const Player = ratingsDB.define('Players', {
+const Tournament = ratingsDB.define('Tournament', {
     //Columns
-    IGN: {
-        type: Sequelize.STRING,
+    Name: {
+        type: Sequelize.TEXT,
         allowNull: false,
         primaryKey: true
     },
-    Elo: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    IRL_Name: {
+    Format: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
+    },
+    Date: {
+        type: Sequelize.DATE,
+        allowNull: false
     }
 });
 
-module.exports = Player
+module.exports = Tournament
