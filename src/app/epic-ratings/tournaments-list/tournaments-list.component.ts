@@ -25,9 +25,9 @@ export class TournamentsListComponent implements OnInit {
   }
 
   goToTournamentCard(tournament){
+    //call api function to get tournament info and assign it to this.tournamentCard
     this.tournamentView = true;
     this.tournamentCard = tournament;
-    console.log(tournament);
   }
 
   //Get the list of Tournaments

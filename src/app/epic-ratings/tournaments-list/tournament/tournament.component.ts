@@ -19,7 +19,8 @@ export class TournamentComponent implements OnInit {
   ) { }
 
   ngOnInit() { 
-    this.loadTournament();
+    this.loadTournament(this.tournamentCard);
+    console.log(this.tournamentCard)
    }
 
    //Back to Tournament List
@@ -28,10 +29,11 @@ export class TournamentComponent implements OnInit {
     this.backToTL.emit(true);
    }
 
-   //Get Tournament
-   loadTournament() {
-      return this.restApi.getTournament().subscribe((data: {}) => {
-        this.Tournament = data;
-      })
-   }
+  //Gets the selected tournament 
+  loadTournament(tournament){
+    return this.restApi.getTournament(tournament).subscribe((data: {}) => {
+      this.Tournament = data
+      console.log(data)
+    })
+  }
 }

@@ -14,7 +14,7 @@ export class RatingsApiService {
   playerURL = this.playersListURL;
 
   tournamentsListURL = 'https://ecg-ratings.herokuapp.com/api/tournaments/';
-  tournamentURL = 'https://ecg-ratings.herokuapp.com/api/tournaments/August-2019-Monthly-Digital';
+  baseTournamentURL = 'https://ecg-ratings.herokuapp.com/api/tournaments/';
 
   constructor(private http: HttpClient) { }
 
@@ -35,8 +35,9 @@ export class RatingsApiService {
   }
 
   //HttpClient API get() => fetch tournament
-  getTournament(): Observable<Tournament>{
-    return this.http.get<Tournament>(this.tournamentURL)
+  getTournament(tournament): Observable<Tournament>{
+    const tournamentURL = this.baseTournamentURL + tournament.Name.replace(/ /g, '-')
+    return this.http.get<Tournament>(tournamentURL)
     .pipe(
       retry(1),
       catchError(this.handleError)
