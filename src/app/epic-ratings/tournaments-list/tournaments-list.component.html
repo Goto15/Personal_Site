@@ -1,0 +1,25 @@
+<div class="tournaments-list">
+    <div class="no-list" *ngIf="!(TournamentsList)">
+        No tournaments to display
+    </div>
+    <div  *ngIf="!(tournamentView)" class="tournaments-list-view">
+        <h3>All Tournaments with Data</h3>
+        <table class="all-tournaments-table">
+            <thead>
+                <tr>
+                    <th scope="col">Tournament Name</th>
+                    <th scope="col">Format</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Matches</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr (click)="goToTournamentCard(tournament)" *ngFor="let tournament of TournamentsList">
+                    <td>{{ tournament.Name }}</td>
+                    <td>{{ tournament.Format }}</td>
+                    <td>{{ tournament.Date }}</td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-tournament [tournamentCard]="tournamentCard" (backToTL)="backToTL($event)" *ngIf="tournamentView"></app-tournament>

@@ -1,0 +1,25 @@
+<div class="players-list" *ngIf="!playerView">
+    <div class="no-list" *ngIf="!(PlayersList)">
+        Not players to display
+    </div>
+    <div class="players-list-view">
+        <h3>All Players with Ratings</h3>
+        <table class="all-players-table">
+            <thead>
+                <tr>
+                    <th scope="col">IGN</th>
+                    <th scope="col">Elo</th>
+                    <th scope="col">Name</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr (click)="goToPlayerCard(player)" *ngFor="let player of PlayersList">
+                    <td>{{ player.IGN }}</td>
+                    <td>{{ player.Elo }}</td>
+                    <td>{{ player.IRL_Name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-player-sheet [playerCard]="playerCard" (backToPL)="backToPL($event)" *ngIf="playerView"></app-player-sheet>
