@@ -1,27 +1,10 @@
-# Psite
+# Personal/portfolio Site
+This is the code I use to deploy my website! It is an Angular 8 (really only 2+. I don't think I'm using anything too specific to 8 yet) app. Personal projects, blog posts, and my contact information are hosted here!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+## TODO 
+[I have a Trello board with ToDo list items here](https://trello.com/b/2oHoUSR8/personal-site)
 
-## Development server
+## Why Angular?
+I've used web frameworks before, and I've never really used one I enjoyed a lot. With this project I wanted to accomplish two specific things: use a popular framework, and learn JavaScript. Under these constrants I lose a few frameworks and platforms that I've used or researched. Ruby on Rails is popular, but not JavaScript. Flask falls to the same restrictions as well. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Choosing Angular boiled down to: I've heard enough about Angular and its component structure to be intrigued, and it's a JavaScript framework in a 'technically true' sense. It's actually a TypeScript framework, and I've written some Dart before and enjoyed it so languages that can compile to JavaScript are close enough. 
