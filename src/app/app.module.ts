@@ -13,6 +13,9 @@ import { PlayerSheetComponent } from './epic-ratings/players-list/player-sheet/p
 import { EpicRatingsComponent } from './epic-ratings/epic-ratings.component';
 import { TournamentsListComponent } from './epic-ratings/tournaments-list/tournaments-list.component';
 import { PlayersListComponent } from './epic-ratings/players-list/players-list.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { PlayersListComponent } from './epic-ratings/players-list/players-list.c
     PlayersListComponent,
     PlayerSheetComponent,
     EpicRatingsComponent,
-    TournamentsListComponent
+    TournamentsListComponent,
+    BlogComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

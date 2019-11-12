@@ -1,0 +1,53 @@
+<div class="projects-list">
+    <h2>Epic Player Ratings API Documentation</h2>
+    <p>
+        The Epic Ratings API is an APi that allows you to query player, tournament, and match level information. The API follows REST principles as closely as possible. If you find any exceptions to REST principles OR you have any issues with the documentation please let me know via email or submitting a GitHub Issue. 
+    </p>
+    <p>
+        One thing to note: API resource URLs are not case sensitive, but specific resources are. For example ‘/API/ALLPLAYERS’ resolves just as well as ‘api/allplayers’, but ‘api/player?IGN=BeneBeats’ will resolve to the player information page for BeneBeats while ‘api/player?IGN=BENEBEATS’ will resolve to an empty JSON object.
+    </p>
+    <h4>
+        Base URL
+    </h4>
+    <p>
+        All URLs referenced in this documentation will have the following base:
+    </p>
+    <p>
+        <a href="https://ecg-ratings.herokuapp.com/api/">
+        https://ecg-ratings.herokuapp.com/api
+        </a>
+    </p>
+    <h4>
+        Player Endpoints
+    </h4>
+    <p>
+        As more information becomes available I expect that these endpoints will become more complex, but as of now there are only simple GET requests available.
+    </p>
+    <h4>
+        /players
+    </h4>
+    <p>
+        This endpoint returns a list of all players who have participated in an online Epic tournament along with their Elo rating and real name. Real names are only included if they are listed on the Epic Gold Ticket list.
+    </p>
+    <h4>
+        /player/playerName
+    </h4>
+    <p>
+        This endpoint allows for case sensitive queries of player information. An example is: ‘/player/BeneBeats’. This URL will return all known information for the player whose name is BeneBeats. 
+    </p>
+    <h4>
+        /tournaments
+    </h4>
+    <p>
+        This endpoint returns a list of all online tournaments that have taken place. 
+    </p>
+    <h4>
+        /tournaments/tournamentName
+    </h4>
+    <p>
+        This endpoint returns a specific tournament with the given name. An example: 'tournaments/May-2019-Digital-Monthly'. This URL will return all known information about a specific tournament. This includes the Date, Format, Name, all matches winners and losers, and what round those matches took place in.
+    </p>
+    <p>
+        As of right now these are the only public endpoints. As I develop new end points I will update this page. 
+    </p>
+</div>
