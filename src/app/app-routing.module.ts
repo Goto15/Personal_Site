@@ -6,8 +6,10 @@ import { EpicRatingsComponent } from './epic-ratings/epic-ratings.component';
 import { BlogComponent } from './blog/blog.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { AllPostsComponent } from './all-posts/all-posts.component';
 
 const routes: Routes = [
+  { path: '', component: AllPostsComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent},
   { path: 'Epic', component: EpicRatingsComponent },

@@ -16,6 +16,7 @@ import { PlayersListComponent } from './epic-ratings/players-list/players-list.c
 import { BlogComponent } from './blog/blog.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { AllPostsComponent } from './all-posts/all-posts.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactComponent } from './contact/contact.component';
     TournamentsListComponent,
     BlogComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    AllPostsComponent
   ],
   imports: [
     BrowserModule,
