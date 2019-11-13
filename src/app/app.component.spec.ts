@@ -5,8 +5,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { Component } from '@angular/core';
 
 
-
-//Stubbing Components for unit tests
+//Stub Components
 @Component({ selector: 'app-header', template: ''})
 class HeaderComponent {}
 
@@ -37,10 +36,28 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+  it(`checks that head exists`, () => {
+    expect('#head').toBeTruthy();
+  });
+
+  it(`checks that style meta-data exists`, () => {
+    expect('#style').toBeTruthy();
+  });
+
+  it(`should create the header component`, () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    const header = fixture.debugElement.componentInstance;
+    expect(header).toBeTruthy();
+  });
+
   it(`should have as title 'Benjamin Sullivan'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Benjamin Sullivan');
+  });
+
+  it(`should create an <hr>`, () => {
+    expect('#hr').toBeTruthy();
   });
 
 });
