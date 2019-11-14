@@ -22,4 +22,12 @@ describe('ContactComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have Github', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    var contact_info = compiled.querySelector('div');
+    var expected_contact_info = "Github: github.com/GoTo15";
+
+    expect(contact_info.textContent).toEqual(expected_contact_info)
+  })
 });
