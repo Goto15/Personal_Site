@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let match of Tournament.Matches">
+                <tr class="row-highlight" *ngFor="let match of Tournament.Matches">
                     <td>{{ match?.Winner }}</td>
                     <td *ngIf="match.Player1 != match.Winner">{{ match?.Player1 }}</td>
                     <td *ngIf="match.Player2 != match.Winner">{{ match?.Player2 }}</td>

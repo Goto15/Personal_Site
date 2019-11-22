@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AllPostsComponent } from './all-posts/all-posts.component';
 
 const routes: Routes = [
-  { path: '', component: AllPostsComponent },
+  { path: '', component: ProjectsComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent},
   { path: 'Epic', component: EpicRatingsComponent },
