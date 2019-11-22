@@ -13,7 +13,7 @@
                 </tr>
             </thead>
             <tbody> 
-                <tr (click)="goToPlayerCard(player)" *ngFor="let player of PlayersList">
+                <tr class="row-highlight" (click)="goToPlayerCard(player)" *ngFor="let player of PlayersList">
                     <td>{{ player.IGN }}</td>
                     <td>{{ player.Elo }}</td>
                     <td>{{ player.IRL_Name }}</td>
